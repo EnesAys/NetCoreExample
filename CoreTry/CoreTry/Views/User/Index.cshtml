@@ -1,0 +1,49 @@
+﻿
+@model IEnumerable<CoreTry.DAL.User>
+
+<div class="panel-body">
+    <div class="btn-group">
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="glyphicon glyphicon-plus"></i>  Add Employee
+        </a>
+    </div>
+
+    <br /> <br />
+
+
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Mail</th>
+                <th>Renk</th>
+                <th>Seçenekler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Mail)</td>
+                    @if (item.ColorID != null)
+                    {
+                        <td>@Html.DisplayFor(modelItem => item.Color.ColorName)</td>
+                    }
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info">
+                            <i class="glyphicon glyphicon-pencil"></i>  Edit
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger" onclick="return confirm('Are you sure you wish to delete ?');">
+                            <i class="glyphicon glyphicon-trash"></i>  Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

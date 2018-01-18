@@ -1,0 +1,56 @@
+﻿@model CoreTry.DAL.User
+
+<br /><br />
+<form asp-action="Create" method="Post">@Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="row">
+            @ViewBag.title
+            <div class="form-group">
+                <label asp-for="FirstName" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+                    <input asp-for="Mail" class="form-control" type="email" placeholder="enes@enes.com" />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+                    <input asp-for="BirthDate" class="form-control" type="date" />
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+                    <input asp-for="Phone" class="form-control" type="tel" placeholder="(555)-555-55-55" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color.ColorName" class="col-lg-2 col-sm-3 control-label"></label>
+                <div class="col-lg-3">
+               <select asp-for="ColorID"class="form-control"asp-items="@(new SelectList(ViewBag.Colors,"ID","ColorName"))"></select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <input type="submit" value="Save" class="col-lg-2 col-md-offset-2 btn btn-success" /> <br />
+
+</form>
