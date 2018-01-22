@@ -1,12 +1,12 @@
-# NetCoreExample
-Visual Studio Code and .Net Core 2.0 Basic Crud Examples(Sql Lite,.Net Core,MVC,VS Code)
+# VS Code and .NetCore
+Visual Studio Code and .Net Core 2.0 Basic Crud Operation Examples(Sql Lite,.Net Core,MVC,VS Code)
 
-Migration işlemi için Proje klasörünün olduğu yerde shifte basılı tutarak powershell yada console ekranını açın:
+Migration islemi iÃ§in Proje klasÃ¶rÃ¼nÃ¼n oldugu yerde shifte basÄ±lÄ± tutarak powershell yada console ekranÄ±nÄ± aÃ§Ä±n:
 
 dotnet ef migrations add InitialCreate
 dotnet ef database update 
 
-Kodlarını yazınız
+KodlarÄ±nÄ± yazÄ±nÄ±z
 
 -----------------------------------------------------------------------
 
@@ -16,4 +16,4 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 
 -----------------------------------------------------------------------
-Soru ve Görüşünüz için enesaysan8@gmail.com 
+Soru ve GÃ¶rÃ¼sÃ¼nÃ¼z iÃ§in enesaysan8@gmail.com 
