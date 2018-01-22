@@ -4,6 +4,7 @@ Visual Studio Code and .Net Core 2.0 Basic Crud Operation Examples(Sql Lite,.Net
 Migration islemi için Proje klasörünün oldugu yerde shifte basılı tutarak powershell yada console ekranını açın:
 
 dotnet ef migrations add InitialCreate
+
 dotnet ef database update 
 
 Kodlarını yazınız
@@ -13,6 +14,7 @@ Kodlarını yazınız
 Open PowerShell or Console in Project Folder and run following commands.
 
 dotnet ef migrations add InitialCreate
+
 dotnet ef database update
 
 -----------------------------------------------------------------------
